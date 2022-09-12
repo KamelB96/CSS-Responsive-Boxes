@@ -1,3 +1,74 @@
 body {
   background: peachpuff;
 }
+
+header,
+.wrap,
+aside,
+div {
+  border: 2px solid rgb(42, 35, 171);
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  flex-wrap: wrap;
+  justify-content: stretch;
+
+}
+
+header {
+  width: 100%;
+  height: 8em;
+  margin-bottom: 1em;
+}
+
+.wrap {
+  width: 100%;
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+}
+
+aside {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+main {
+  flex-grow: 4;
+}
+
+aside>div {
+  width: 22%;
+  margin: 1vh;
+}
+
+
+
+
+@media (min-width: 600px) {
+  .wrap {
+    flex-direction: row;
+  }
+
+  aside {
+    width: 80%;
+    flex: 4;
+    align-items: center;
+    margin-right: 1em;
+  }
+
+  aside>div {
+    height: 10em;
+  }
+
+  main {
+    flex: 2;
+  }
+}
